@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Christene Chavez — Finance & Data Analytics</title><link rel="stylesheet" href="assets/styles.css">
+<style>
+.hero-wrap{max-width:1100px;margin:28px auto 48px;padding:0 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.kicker{letter-spacing:.12em;font-size:12px;color:var(--link);margin:0 0 6px}
+.hero-title{font-size:clamp(34px,5vw,56px);line-height:1.1;margin:0 0 10px;color:var(--primary)}
+.subtitle{margin:0 0 14px;color:var(--muted);font-weight:600}
+.lead{margin:0 0 18px;max-width:60ch}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.cta-primary{background:var(--accent);color:#fff;border:none;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow)}
+.cta-secondary{border:1px solid rgba(0,0,0,.12);padding:12px 16px;border-radius:12px;background:#fff}
+.portrait-wrap{display:flex;justify-content:center}
+.portrait{width:min(320px,80%);aspect-ratio:1/1;border-radius:50%;object-fit:cover;background:var(--primary)}
+@media (max-width:860px){.hero-wrap{grid-template-columns:1fr}}
+</style></head>
+<body>
+<nav class="nav">
+  <div class="brand">Christene<span class="dot">.</span>Chavez</div>
+  <div class="controls">
+    <a class="btn" href="index.html">Home</a>
+    <a class="btn" href="projects/index.html">Portfolio</a>
+    <a class="btn" href="experience.html">Experience</a>
+    <a class="btn" href="education.html">Education</a>
+    <a class="btn" href="contact.html">Contact</a>
+    <a class="btn" href="assets/files/RMC Chavez Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+  </div>
+</nav>
+
+<main class="hero-wrap">
+  <section>
+    <p class="kicker">FINANCE · DATA ANALYTICS</p>
+    <h1 class="hero-title">Christene Chavez</h1>
+    <p class="subtitle">Grant coordination, financial modeling, & data‑driven reporting</p>
+    <p class="lead">I help organizations make better decisions with clear models, clean datasets, and concise reporting—recently building municipal grant trackers (Excel/Power BI), risk dashboards, and practical forecasting tools.</p>
+    <div class="cta-row">
+      <a class="cta-primary" href="assets/files/RMC Chavez Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <a class="cta-secondary" href="projects/index.html">See Portfolio →</a>
+    </div>
+  </section>
+  <aside class="portrait-wrap">
+    <img class="portrait" src="assets/images/headshot.JPG" alt="Portrait of Christene Chavez">
+  </aside>
+</main>
+
+<footer class="footer">© <span id="y"></span> Christene Chavez · GitHub Pages</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body></html>
