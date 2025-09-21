@@ -1,1 +1,0 @@
-# Portfolio quick start\n\n1) Create repo christenechavez.github.io (Public).\n2) Upload all files at repo root.\n3) Settings → Pages → Deploy from a branch → main / root.\n4) Open https://christenechavez.github.io\n
