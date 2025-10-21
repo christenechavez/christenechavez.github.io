@@ -23,7 +23,7 @@
   <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Christene<span class="dot">.</span>Chavez</a></div>
   <div class="controls">
     <a class="btn" href="index.html">Home</a>
-    <a class="btn" href="projects/index.html">Portfolio</a>
+    <a class="btn" href="projects/index.html">Projects</a>
     <a class="btn" href="experience.html">Experience</a>
     <a class="btn" href="education.html">Education</a>
     <a class="btn" href="writing/index.html">Writing</a>
@@ -38,14 +38,13 @@
     <h1 class="hero-title">Christene Chavez</h1>
     <p class="subtitle">Grant coordination, financial modeling, & data-driven reporting</p>
 
-    <!-- new, friendlier lead — no em dashes -->
     <p class="lead">
       I help teams turn messy numbers into clear decisions. Recently I built municipal grant trackers with Excel and Power BI, risk dashboards that flag what matters, and simple forecasting tools that leaders actually use. If you want clean models, tidy datasets, and concise reporting, you’re in the right place.
     </p>
 
     <div class="cta-row">
       <a class="cta-primary" href="assets/files/RMC Chavez Resume.pdf" target="_blank" rel="noopener">View Resume</a>
-      <a class="cta-secondary" href="projects/index.html">See Portfolio →</a>
+      <a class="cta-secondary" href="projects/index.html">See Projects →</a>
     </div>
   </section>
   <aside class="portrait-wrap">
@@ -112,3 +111,11 @@
     <li>Sensitivity Analysis</li>
   </ul>
 </section>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Christene Chavez</p>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
