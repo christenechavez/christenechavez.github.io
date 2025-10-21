@@ -226,3 +226,20 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
 
 /* Ensure JS toggle can show the controls on mobile */
 .nav.is-open .controls { display:flex; }
+/* ===== Overlay menu close button (mobile overlay) ===== */
+@media (max-width:860px){
+  .menu-close{
+    align-self:flex-end;
+    margin-bottom:24px;
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+    border-radius:14px;
+    padding:10px 14px;
+    font-size:16px;
+  }
+  .menu-close:active,
+  .menu-close:hover{
+    background:rgba(255,255,255,.09);
+  }
+}
