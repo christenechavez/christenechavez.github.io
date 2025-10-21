@@ -7,10 +7,9 @@
 (function () {
   var nav = document.querySelector('.nav');
   if (nav) {
-    // 1) Ensure there is a toggle button
+    // Ensure there is a toggle button (safety for older pages)
     var toggle = nav.querySelector('.nav-toggle');
     if (!toggle) {
-      // Create one if missing (pages that only have .nav + .controls)
       toggle = document.createElement('button');
       toggle.className = 'nav-toggle';
       toggle.setAttribute('aria-label', 'Menu');
@@ -19,12 +18,8 @@
 
       var brand = nav.querySelector('.brand');
       if (brand && brand.parentNode === nav) {
-        // Insert right after the brand for consistent layout
-        if (brand.nextSibling) {
-          nav.insertBefore(toggle, brand.nextSibling);
-        } else {
-          nav.appendChild(toggle);
-        }
+        if (brand.nextSibling) nav.insertBefore(toggle, brand.nextSibling);
+        else nav.appendChild(toggle);
       } else {
         nav.appendChild(toggle);
       }
@@ -32,21 +27,19 @@
 
     var controls = nav.querySelector('.controls');
 
-    // 2) Toggle behavior
     function closeMenu() {
       nav.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     }
     function openMenu() {
       nav.classList.add('is-open');
+      document.body.classList.add('menu-open');
       if (toggle) toggle.setAttribute('aria-expanded', 'true');
     }
     function toggleMenu() {
-      if (nav.classList.contains('is-open')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
+      if (nav.classList.contains('is-open')) closeMenu();
+      else openMenu();
     }
 
     if (toggle && controls) {
@@ -55,10 +48,11 @@
         toggleMenu();
       });
 
-      // Close when clicking outside the nav
+      // Close when tapping outside overlay
       document.addEventListener('click', function (e) {
         if (!nav.classList.contains('is-open')) return;
-        if (!nav.contains(e.target)) closeMenu();
+        // If the click is outside the .controls overlay and not the toggle, close.
+        if (!controls.contains(e.target) && e.target !== toggle) closeMenu();
       });
 
       // Close on Escape
@@ -66,17 +60,15 @@
         if (e.key === 'Escape') closeMenu();
       });
 
-      // Reset menu if resizing to desktop
-      var DESKTOP_BREAKPOINT = 861; // mirrors CSS @media (max-width: 860px)
+      // Reset if resizing to desktop
+      var DESKTOP = 861;
       window.addEventListener('resize', function () {
-        if (window.innerWidth >= DESKTOP_BREAKPOINT) {
-          closeMenu();
-        }
+        if (window.innerWidth >= DESKTOP) closeMenu();
       });
     }
   }
 
-  // 3) Footer year helper (supports #y or #year)
+  // Footer year helper (#y or #year)
   var y = document.getElementById('y') || document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
