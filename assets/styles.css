@@ -197,3 +197,17 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
     border:1px solid rgba(0,0,0,.06);
   }
 }
+/* Prevent active tab from highlighting incorrectly */
+.controls a.btn {
+  color: var(--text);
+  background: #fff;
+}
+
+.controls a.btn:hover {
+  background: var(--warm);
+}
+
+.controls a.btn[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+}
