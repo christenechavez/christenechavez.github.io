@@ -51,14 +51,18 @@
   </style>
 </head>
 <body>
-<nav class="nav">
+<header class="nav">
   <div class="brand">
-    <a href="/index.html" style="text-decoration:none;color:inherit">Christene<span class="dot">.</span>Chavez</a>
+    <a href="/index.html" style="text-decoration:none;color:inherit">
+      Christene<span class="dot">.</span>Chavez
+    </a>
   </div>
 
-  <button class="nav-toggle" aria-expanded="false" aria-controls="site-links" aria-label="Menu">☰</button>
+  <!-- Hamburger (keep it here, after .brand) -->
+  <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
 
-  <div id="site-links" class="controls">
+  <!-- Controls: convert to <nav> for clarity -->
+  <nav class="controls" id="site-links" aria-label="Primary navigation">
     <a class="btn" href="/index.html">Home</a>
     <a class="btn" href="/resume/index.html">Resume</a>
     <a class="btn" href="/experience.html">Experience</a>
@@ -66,8 +70,8 @@
     <a class="btn" href="/projects/index.html">Projects</a>
     <a class="btn" href="/writing/index.html">Writing</a>
     <a class="btn" href="/contact.html">Contact</a>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <main class="page-wrap">
   <h1>Writing</h1>
