@@ -1,9 +1,54 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Writing — Christene Chavez</title>
   <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    /* Match Experience page margins and color balance */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 28px auto 48px;
+      padding: 0 20px;
+    }
+    .page-wrap h1 {
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .lead {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow, 0 1px 4px rgba(0,0,0,.08));
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+    .card h3 {
+      color: var(--primary);
+      margin: 0 0 6px;
+    }
+    .card p {
+      color: var(--muted);
+      margin: 0 0 8px;
+      line-height: 1.5;
+    }
+    .card a.btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+    .card a.btn:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 <nav class="nav">
@@ -19,23 +64,28 @@
   </div>
 </nav>
 
-<main>
-  <section class="page-intro">
-    <h1>Writing</h1>
-    <p>Short pieces on leadership, municipal finance, and building community through numbers and narrative.</p>
-  </section>
+<main class="page-wrap">
+  <h1>Writing</h1>
+  <p class="lead">Short pieces on leadership, municipal finance, and building community through numbers and narrative.</p>
 
   <section>
-    <div class="grid" id="writing-grid" aria-live="polite"></div>
+    <div id="writing-grid" aria-live="polite"></div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Christene Chavez</p>
+  <div class="wrap">
+    <p>© <span id="year"></span> Christene Chavez</p>
+    <nav aria-label="Contact">
+      <a href="mailto:youremail@domain.com">Email</a>
+      <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/christenechavez" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
 </footer>
 
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
 window._writingData = [
   {
@@ -64,14 +114,12 @@ grid.innerHTML = rows.map(a=>{
   const href = `${a.slug}.html`;
   return `
     <article class="card">
-      <div class="card-body">
-        <h3><a href="${href}">${a.title}</a></h3>
-        <p class="meta" style="color:var(--muted);font-size:.9rem;">
-          ${a.date ? new Date(a.date).toLocaleDateString() : ""}
-        </p>
-        <p>${a.blurb||""}</p>
-        <p><a class="btn" href="${href}">Read →</a></p>
-      </div>
+      <h3><a href="${href}" style="color:var(--primary);text-decoration:none;">${a.title}</a></h3>
+      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+        ${a.date ? new Date(a.date).toLocaleDateString() : ""}
+      </p>
+      <p>${a.blurb||""}</p>
+      <a class="btn" href="${href}">Read →</a>
     </article>`;
 }).join("");
 </script>
