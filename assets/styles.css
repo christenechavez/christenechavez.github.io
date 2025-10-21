@@ -166,7 +166,7 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
 
   /* Use .controls as a full-screen overlay when nav is open */
   .nav .controls{
-    display:none;                 /* hidden by default */
+    display:none;                 /* HIDDEN by default on phones */
     position:fixed;
     inset:0;
     background:var(--primary);    /* dusty/navy backdrop */
@@ -175,13 +175,13 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
     padding:24px 18px 32px;
     overflow:auto;
 
-    /* center the menu stack */
-    display:flex;
+    /* layout for the overlay menu */
     flex-direction:column;
     justify-content:center;
     align-items:center;
     gap:14px;
   }
+  /* Only show when nav is open */
   .nav.is-open .controls{ display:flex; }
 
   /* Full-width white-outline buttons */
@@ -200,6 +200,22 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
     background:rgba(255,255,255,.09);
     text-decoration:none;
     transform:none;
+  }
+
+  /* Overlay close button */
+  .menu-close{
+    align-self:flex-end;
+    margin-bottom:24px;
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+    border-radius:14px;
+    padding:10px 14px;
+    font-size:16px;
+  }
+  .menu-close:active,
+  .menu-close:hover{
+    background:rgba(255,255,255,.09);
   }
 
   /* Prevent page scroll when menu open */
@@ -223,23 +239,3 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
 .controls a.btn { color: var(--text); background: #fff; }
 .controls a.btn:hover { background: var(--warm); text-decoration:none; }
 .controls a.btn[aria-current="page"] { background: var(--accent); color:#fff; }
-
-/* Ensure JS toggle can show the controls on mobile */
-.nav.is-open .controls { display:flex; }
-/* ===== Overlay menu close button (mobile overlay) ===== */
-@media (max-width:860px){
-  .menu-close{
-    align-self:flex-end;
-    margin-bottom:24px;
-    background:transparent;
-    color:#fff;
-    border:2px solid #fff;
-    border-radius:14px;
-    padding:10px 14px;
-    font-size:16px;
-  }
-  .menu-close:active,
-  .menu-close:hover{
-    background:rgba(255,255,255,.09);
-  }
-}
