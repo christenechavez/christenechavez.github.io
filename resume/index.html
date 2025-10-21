@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume • Christene Chavez</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .resume-wrap{
+      max-width: 1100px;
+      margin: 28px auto 48px;
+      padding: 0 20px;
+    }
+    .resume-hero{ margin-bottom: 14px; }
+    .resume-hero h1{ color: var(--primary); margin: 0 0 6px; }
+    .resume-hero p{ color: var(--muted); margin: 0 0 12px; }
+    .resume-card{
+      background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px;
+      box-shadow: var(--shadow); padding: 14px;
+    }
+    .resume-card img{
+      display:block; width:100%; height:auto; border-radius:12px;
+    }
+    .resume-actions{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;
+    }
+    .resume-actions .btn{
+      display:inline-block; padding:10px 14px; border-radius:999px;
+      background:#fff; border:1px solid rgba(0,0,0,.12); box-shadow:var(--shadow);
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Unified header -->
+  <nav class="nav">
+    <div class="brand">
+      <a href="/index.html" style="text-decoration:none;color:inherit">Christene<span class="dot">.</span>Chavez</a>
+    </div>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-links" aria-label="Menu">☰</button>
+
+    <div id="site-links" class="controls">
+      <a class="btn" href="/index.html">Home</a>
+      <a class="btn" href="/resume/index.html">Resume</a>
+      <a class="btn" href="/experience.html">Experience</a>
+      <a class="btn" href="/education.html">Education</a>
+      <a class="btn" href="/projects/index.html">Projects</a>
+      <a class="btn" href="/writing/index.html">Writing</a>
+      <a class="btn" href="/contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="resume-wrap">
+    <header class="resume-hero">
+      <h1>Resume</h1>
+      <p>Preview below. You can also download the PDF.</p>
+      <div class="resume-actions">
+        <a class="btn" href="/assets/files/RMC Chavez Resume.pdf" download>Download PDF</a>
+      </div>
+    </header>
+
+    <section class="resume-card" aria-label="Resume preview">
+      <!-- Replace the image path below with your exported resume image if different -->
+      <img src="/assets/images/resume-preview.jpg" alt="Resume preview for Christene Chavez">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="y"></span> Christene Chavez</p>
+      <nav aria-label="Contact">
+        <a href="mailto:youremail@domain.com">Email</a>
+        <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/christenechavez" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    (function(){var el=document.getElementById('y'); if(el) el.textContent=new Date().getFullYear();})();
+  </script>
+  <script src="/assets/script.js" defer></script>
+</body>
+</html>
