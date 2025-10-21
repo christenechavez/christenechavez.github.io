@@ -4,7 +4,6 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Writing — Christene Chavez</title>
   <link rel="stylesheet" href="../assets/styles.css">
-  <style>.card a.more{display:inline-block;margin-top:6px}</style>
 </head>
 <body>
   <!-- NAV: writing-level (needs ../ links) -->
@@ -23,23 +22,7 @@
   <header class="hero"><h1>Writing</h1></header>
 
   <main class="grid">
-    <article class="card">
-      <h3><a href="small-towns-lessons-on-the-power-of-data.html">A Small Town’s Lessons on the Power of Data</a></h3>
-      <p>Practical wins from treating municipal data like a community asset.</p>
-      <a class="more" href="small-towns-lessons-on-the-power-of-data.html">Read →</a>
-    </article>
-
-    <article class="card">
-      <h3><a href="biscuits-belief-and-being-the-boss.html">Biscuits, Belief, and Being the Boss</a></h3>
-      <p>Leadership that listens first and celebrates small everyday moments.</p>
-      <a class="more" href="biscuits-belief-and-being-the-boss.html">Read →</a>
-    </article>
-
-    <article class="card">
-      <h3><a href="finding-the-right-tool.html">Finding the Right Tool</a></h3>
-      <p>Choosing the simplest solution that actually solves the problem.</p>
-      <a class="more" href="finding-the-right-tool.html">Read →</a>
-    </article>
+    <div id="writing-grid" class="grid" aria-live="polite"></div>
   </main>
 
   <footer class="site-footer">
@@ -52,6 +35,14 @@
       </nav>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+
+  <!-- 1) Your posts data -->
+  <script>
+  window._writingData = [
+    {
+      slug: "small-towns-lessons-on-the-power-of-data",
+      title: "A Small Town’s Lessons on the Power of Data",
+      blurb: "Practical wins from treating municipal data like a community asset.",
+      date: "2025-10-20"
+    },
+    {
