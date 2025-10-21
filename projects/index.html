@@ -5,7 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Christene Chavez</title>
   <link rel="stylesheet" href="../assets/styles.css" />
-  <style>.card img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid rgba(0,0,0,.06)}</style>
+  <style>
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,.06)
+    }
+    /* --- Scoped fix: keep card buttons from inheriting nav/mobile chip sizing --- */
+    .card .btn{
+      display:inline-block;
+      min-width:auto;
+      flex: initial;
+      padding:8px 12px;            /* match your global .btn look */
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:999px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    @media (max-width:860px){
+      .card .btn{
+        /* override the global mobile rule that targets .btn */
+        min-width:auto;
+        flex:0 1 auto;
+        padding:10px 12px;
+      }
+    }
+
+    /* Optional: nicer details styling if not already in styles.css */
+    .card details{
+      margin-top:8px;
+      background:#fffdf8;
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:12px;
+      padding:8px 10px;
+    }
+    .card details summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--primary);
+      list-style:none;
+    }
+    .card details[open] summary{ color:var(--accent); }
+    .card details .case{ margin-top:6px; }
+    .card details h4{ margin:8px 0 4px; color:var(--primary); }
+  </style>
 </head>
 <body>
 <nav class="nav">
