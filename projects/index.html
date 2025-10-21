@@ -11,29 +11,33 @@
       height:180px;
       object-fit:cover;
       border-radius:12px;
-      border:1px solid rgba(0,0,0,.06)
+      border:1px solid rgba(0,0,0,.06);
+      cursor:pointer;
     }
-    /* --- Scoped fix: keep card buttons from inheriting nav/mobile chip sizing --- */
+
+    /* Keep card buttons tidy and independent from global .btn in nav */
     .card .btn{
       display:inline-block;
       min-width:auto;
       flex: initial;
-      padding:8px 12px;            /* match your global .btn look */
+      padding:8px 12px;
       border:1px solid rgba(0,0,0,.12);
       border-radius:999px;
       background:#fff;
       box-shadow:var(--shadow);
+      text-decoration:none;
     }
     @media (max-width:860px){
       .card .btn{
-        /* override the global mobile rule that targets .btn */
         min-width:auto;
         flex:0 1 auto;
         padding:10px 12px;
       }
     }
 
-    /* Optional: nicer details styling if not already in styles.css */
+    .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+
+    /* Optional: nicer details styling */
     .card details{
       margin-top:8px;
       background:#fffdf8;
@@ -50,6 +54,32 @@
     .card details[open] summary{ color:var(--accent); }
     .card details .case{ margin-top:6px; }
     .card details h4{ margin:8px 0 4px; color:var(--primary); }
+
+    /* Simple image modal */
+    .modal {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.75);
+      display: none; align-items: center; justify-content: center;
+      padding: 20px; z-index: 9999;
+    }
+    .modal[open] { display: flex; }
+    .modal-inner {
+      max-width: min(1100px, 96vw);
+      max-height: 90vh;
+      background: #fff; border-radius: 16px;
+      padding: 10px; box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      position: relative;
+    }
+    .modal-inner img {
+      display: block; max-width: 100%; max-height: 80vh; height: auto; width: auto; margin: 0 auto;
+      border-radius: 12px;
+    }
+    .modal-close {
+      position: absolute; top: 8px; right: 8px;
+      border: 1px solid rgba(0,0,0,.12);
+      background: #fff; border-radius: 10px; padding: 6px 10px; cursor: pointer;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
@@ -68,16 +98,19 @@
 
 <header class="hero">
   <h1>Projects</h1>
-  <p>Click a card to open the project file. Expand “Read More” for the case study.</p>
+  <p>Click a card image or “View File” to see a preview. “Download Excel” is available where relevant.</p>
 </header>
 
 <main class="grid">
   <!-- Altair AI -->
   <article class="card">
-    <img src="../assets/images/Altair AI Preview.jpg" alt="Altair AI preview">
+    <img src="../assets/images/Altair AI Preview.jpg" alt="Altair AI preview"
+         data-full="../assets/images/Altair AI Preview.jpg">
     <h3>Altair AI</h3>
     <p>Model evaluation summary and recommendations for fraud detection improvements.</p>
-    <a class="btn" href="../assets/files/Altair AI.docx" target="_blank" rel="noopener">Open File</a>
+    <div class="btn-row">
+      <a class="btn" href="#" data-view="../assets/images/Altair AI Preview.jpg">View File</a>
+    </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
@@ -102,10 +135,13 @@
 
   <!-- Altair AI — Summary -->
   <article class="card">
-    <img src="../assets/images/Altair AI Summary Preview.jpg" alt="Altair AI summary preview">
+    <img src="../assets/images/Altair AI Summary Preview.jpg" alt="Altair AI summary preview"
+         data-full="../assets/images/Altair AI Summary Preview.jpg">
     <h3>Altair AI — Summary</h3>
     <p>Executive summary of findings, assumptions, and next-step actions.</p>
-    <a class="btn" href="../assets/files/Altair AI Summary.docx" target="_blank" rel="noopener">Open File</a>
+    <div class="btn-row">
+      <a class="btn" href="#" data-view="../assets/images/Altair AI Summary Preview.jpg">View File</a>
+    </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
@@ -125,10 +161,13 @@
 
   <!-- NFL Tableau + Alteryx -->
   <article class="card">
-    <img src="../assets/images/NFL Tableau Alteryx Preview.jpg" alt="NFL Tableau/Alteryx preview">
+    <img src="../assets/images/NFL Tableau Alteryx Preview.jpg" alt="NFL Tableau/Alteryx preview"
+         data-full="../assets/images/NFL Tableau Alteryx Preview.jpg">
     <h3>NFL Tableau + Alteryx</h3>
     <p>Exploratory dashboarding linking deep pass rate to scoring outcomes.</p>
-    <a class="btn" href="../assets/files/NFL Tableau Alteryx.pdf" target="_blank" rel="noopener">Open File</a>
+    <div class="btn-row">
+      <a class="btn" href="#" data-view="../assets/images/NFL Tableau Alteryx Preview.jpg">View File</a>
+    </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
@@ -149,12 +188,16 @@
     </details>
   </article>
 
-  <!-- Tax & Budget Sheet -->
+  <!-- Tax & Budget Sheet (Excel): allow download -->
   <article class="card">
-    <img src="../assets/images/Tax and Budget Sheet Preview.jpg" alt="Tax and Budget Sheet preview">
+    <img src="../assets/images/Tax and Budget Sheet Preview.jpg" alt="Tax and Budget Sheet preview"
+         data-full="../assets/images/Tax and Budget Sheet Preview.jpg">
     <h3>Tax &amp; Budget Sheet</h3>
     <p>Parameterized tax calculation tool and budgeting inputs for scenario analysis.</p>
-    <a class="btn" href="../assets/files/Tax and Budget Sheet.xlsx" target="_blank" rel="noopener">Open File</a>
+    <div class="btn-row">
+      <a class="btn" href="#" data-view="../assets/images/Tax and Budget Sheet Preview.jpg">View File</a>
+      <a class="btn" href="../assets/files/Tax and Budget Sheet.xlsx" download>Download Excel</a>
+    </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
@@ -177,10 +220,13 @@
 
   <!-- Corporate Tax Return (KPMG) -->
   <article class="card">
-    <img src="../assets/images/KPMG Preview.jpg" alt="KPMG tax return preview">
+    <img src="../assets/images/KPMG Preview.jpg" alt="KPMG tax return preview"
+         data-full="../assets/images/KPMG Preview.jpg">
     <h3>Corporate Tax Return (KPMG)</h3>
     <p>Prepared corporate return packet with schedules and supporting documentation.</p>
-    <a class="btn" href="../assets/files/KPMG Corporate Tax Return.pdf" target="_blank" rel="noopener">Open File</a>
+    <div class="btn-row">
+      <a class="btn" href="#" data-view="../assets/images/KPMG Preview.jpg">View File</a>
+    </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
@@ -198,6 +244,14 @@
   </article>
 </main>
 
+<!-- Image Modal -->
+<div class="modal" id="imgModal" aria-modal="true" role="dialog" aria-label="Project image viewer">
+  <div class="modal-inner">
+    <button class="modal-close" type="button" aria-label="Close">Close ✕</button>
+    <img id="modalImg" src="" alt="Project view" />
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="wrap">
     <p>© <span id="y"></span> Christene Chavez</p>
@@ -208,9 +262,46 @@
     </nav>
   </div>
 </footer>
+
 <script>
+  // Year stamp
   (function(){ var el=document.getElementById('y'); if(el) el.textContent=new Date().getFullYear(); })();
+
+  // Modal logic
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = modal.querySelector('.modal-close');
+
+  function openModal(src) {
+    modalImg.src = src;
+    modal.setAttribute('open', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.removeAttribute('open');
+    modalImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Open from image click
+  document.querySelectorAll('article.card img[data-full]').forEach(img=>{
+    img.addEventListener('click', ()=>{
+      openModal(img.getAttribute('data-full'));
+    });
+  });
+
+  // Open from "View File" buttons
+  document.querySelectorAll('a[data-view]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      openModal(a.getAttribute('data-view'));
+    });
+  });
+
+  // Close actions
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
 </script>
 </body>
 </html>
-
