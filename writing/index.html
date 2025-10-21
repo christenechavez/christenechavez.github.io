@@ -6,74 +6,74 @@
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-  <nav class="nav">
-    <div class="brand"><a href="../index.html" style="text-decoration:none;color:inherit">Christene<span class="dot">.</span>Chavez</a></div>
-    <div class="controls">
-      <a class="btn" href="../index.html">Home</a>
-      <a class="btn" href="../projects/index.html">Portfolio</a>
-      <a class="btn" href="../writing/index.html">Writing</a>
-      <a class="btn" href="../experience.html">Experience</a>
-      <a class="btn" href="../education.html">Education</a>
-      <a class="btn" href="../contact.html">Contact</a>
-      <a class="btn" href="../assets/files/RMC Chavez Resume.pdf" target="_blank" rel="noopener">View Resume</a>
-    </div>
-  </nav>
+<nav class="nav">
+  <div class="brand"><a href="../index.html" style="text-decoration:none;color:inherit">Christene<span class="dot">.</span>Chavez</a></div>
+  <div class="controls">
+    <a class="btn" href="../index.html">Home</a>
+    <a class="btn" href="../projects/index.html">Projects</a>
+    <a class="btn" href="../writing/index.html">Writing</a>
+    <a class="btn" href="../experience.html">Experience</a>
+    <a class="btn" href="../education.html">Education</a>
+    <a class="btn" href="../contact.html">Contact</a>
+    <a class="btn" href="../assets/files/RMC Chavez Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+  </div>
+</nav>
 
-  <main>
-    <section class="page-intro">
-      <h1>Writing</h1>
-      <p>Short pieces on leadership, municipal finance, and building community through numbers and narrative.</p>
-    </section>
+<main>
+  <section class="page-intro">
+    <h1>Writing</h1>
+    <p>Short pieces on leadership, municipal finance, and building community through numbers and narrative.</p>
+  </section>
 
-    <section>
-      <div class="grid" id="writing-grid" aria-live="polite"></div>
-    </section>
-  </main>
+  <section>
+    <div class="grid" id="writing-grid" aria-live="polite"></div>
+  </section>
+</main>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Christene Chavez · <a href="../contact.html">Get in touch</a></p>
-  </footer>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Christene Chavez</p>
+</footer>
 
-  <script>
-  document.getElementById('year').textContent=new Date().getFullYear();
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
 
-  window._writingData = [
-    {
-      slug: "small-towns-lessons-on-the-power-of-data",
-      title: "A Small Town’s Lessons on the Power of Data",
-      blurb: "Practical wins from treating municipal data like a community asset.",
-      date: "2025-10-21"
-    },
-    {
-      slug: "biscuits-belief-and-being-the-boss",
-      title: "Biscuits, Belief, and Being the Boss",
-      blurb: "Leadership that listens first and celebrates small everyday moments.",
-      date: "2025-10-20"
-    },
-    {
-      slug: "finding-the-right-tool",
-      title: "Finding the Right Tool",
-      blurb: "Choosing the simplest solution that actually solves the problem.",
-      date: "2025-10-19"
-    }
-  ];
+window._writingData = [
+  {
+    slug: "small-towns-lessons-on-the-power-of-data",
+    title: "A Small Town’s Lessons on the Power of Data",
+    blurb: "Practical wins from treating municipal data like a community asset.",
+    date: "2025-10-21"
+  },
+  {
+    slug: "biscuits-belief-and-being-the-boss",
+    title: "Biscuits, Belief, and Being the Boss",
+    blurb: "Leadership that listens first and celebrates small everyday moments.",
+    date: "2025-10-20"
+  },
+  {
+    slug: "finding-the-right-tool",
+    title: "Finding the Right Tool",
+    blurb: "Choosing the simplest solution that actually solves the problem.",
+    date: "2025-10-19"
+  }
+];
 
-  const grid = document.getElementById('writing-grid');
-  const rows = [...window._writingData].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  grid.innerHTML = rows.map(a=>{
-    const href = `${a.slug}.html`;
-    return `
-      <article class="card">
-        <div class="card-body">
-          <h3><a href="${href}">${a.title}</a></h3>
-          <p class="meta" style="color:var(--muted);font-size:.9rem;">
-            ${a.date ? new Date(a.date).toLocaleDateString() : ""}
-          </p>
-          <p>${a.blurb||""}</p>
-          <p><a class="btn" href="${href}">Read →</a></p>
-        </div>
-      </article>`;
-  }).join("");
-  </script>
+const grid = document.getElementById('writing-grid');
+const rows = [...window._writingData].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+grid.innerHTML = rows.map(a=>{
+  const href = `${a.slug}.html`;
+  return `
+    <article class="card">
+      <div class="card-body">
+        <h3><a href="${href}">${a.title}</a></h3>
+        <p class="meta" style="color:var(--muted);font-size:.9rem;">
+          ${a.date ? new Date(a.date).toLocaleDateString() : ""}
+        </p>
+        <p>${a.blurb||""}</p>
+        <p><a class="btn" href="${href}">Read →</a></p>
+      </div>
+    </article>`;
+}).join("");
+</script>
 </body>
 </html>
