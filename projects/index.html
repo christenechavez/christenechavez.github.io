@@ -199,9 +199,18 @@
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Christene Chavez</p>
+  <div class="wrap">
+    <p>© <span id="y"></span> Christene Chavez</p>
+    <nav aria-label="Contact">
+      <a href="mailto:youremail@domain.com">Email</a>
+      <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/christenechavez" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
 </footer>
-
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  (function(){ var el=document.getElementById('y'); if(el) el.textContent=new Date().getFullYear(); })();
+</script>
 </body>
 </html>
+
