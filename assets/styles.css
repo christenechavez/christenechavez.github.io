@@ -211,3 +211,4 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
   background: var(--accent);
   color: #fff;
 }
+.nav.is-open .controls { display: flex; }
