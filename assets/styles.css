@@ -5,7 +5,7 @@
   --muted:#5a616a;
   --bg:#fcfcfc;
   --card:#fff;
-  --primary:#193A59;
+  --primary:#193A59;      /* dusty/navy */
   --accent:#6B8BA4;
   --warm:#F7E7CE;
   --highlight:#F4B942;
@@ -46,7 +46,7 @@ a:hover{text-decoration:underline}
   box-shadow:var(--shadow);
 }
 .btn:hover{transform:translateY(-1px)}
-/* hamburger is hidden on desktop; shown on mobile in media query */
+/* hamburger hidden on desktop; shown on mobile */
 .nav-toggle{
   display:none;
   background:#fff;
@@ -152,37 +152,58 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
 }
 
 /* =========================
-   Mobile polish and responsive nav
+   Mobile polish + FULL-SCREEN OVERLAY MENU
    ========================= */
 @media (max-width:860px){
-  /* Stack hero into one column (for pages using .hero-wrap) */
+  /* Basic mobile polish */
   .hero-wrap{ grid-template-columns:1fr !important; gap:18px; }
   .hero-title{ font-size:clamp(28px,8vw,40px); }
   .lead{ font-size:16px; }
 
-  /* Show hamburger, hide controls by default */
+  /* Hamburger visible; desktop controls hidden by default on mobile */
   .nav-toggle{ display:inline-block; }
   .nav{ gap:8px; padding:10px 12px; }
+
+  /* Use .controls as a full-screen overlay when nav is open */
   .nav .controls{
-    display:none;
-    position:absolute;
-    right:16px; top:60px;
-    background:#fff;
-    border:1px solid rgba(0,0,0,.08);
-    border-radius:14px;
-    padding:10px;
-    box-shadow:0 6px 24px rgba(0,0,0,.12);
+    display:none;                 /* hidden by default */
+    position:fixed;
+    inset:0;
+    background:var(--primary);    /* dusty/navy backdrop */
+    color:#fff;
     z-index:1000;
+    padding:24px 18px 32px;
+    overflow:auto;
+
+    /* center the menu stack */
+    display:flex;
     flex-direction:column;
-    gap:8px;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
   }
   .nav.is-open .controls{ display:flex; }
-  .nav.is-open .controls .btn{
-    min-width:220px;
+
+  /* Full-width white-outline buttons */
+  .nav .controls .btn{
+    width:min(560px, 88vw);
     text-align:center;
-    padding:10px 14px;
-    border-radius:999px;
+    padding:16px 18px;
+    border-radius:16px;
+    font-size:20px;
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+    box-shadow:none;
   }
+  .nav .controls .btn:hover{
+    background:rgba(255,255,255,.09);
+    text-decoration:none;
+    transform:none;
+  }
+
+  /* Prevent page scroll when menu open */
+  body.menu-open{ overflow:hidden; }
 
   /* Cards & grids: single column */
   .grid{ grid-template-columns:1fr !important; gap:14px; }
@@ -197,18 +218,11 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
     border:1px solid rgba(0,0,0,.06);
   }
 }
-/* Prevent active tab from highlighting incorrectly */
-.controls a.btn {
-  color: var(--text);
-  background: #fff;
-}
 
-.controls a.btn:hover {
-  background: var(--warm);
-}
+/* Prevent active tab from highlighting incorrectly (desktop) */
+.controls a.btn { color: var(--text); background: #fff; }
+.controls a.btn:hover { background: var(--warm); text-decoration:none; }
+.controls a.btn[aria-current="page"] { background: var(--accent); color:#fff; }
 
-.controls a.btn[aria-current="page"] {
-  background: var(--accent);
-  color: #fff;
-}
-.nav.is-open .controls { display: flex; }
+/* Ensure JS toggle can show the controls on mobile */
+.nav.is-open .controls { display:flex; }
