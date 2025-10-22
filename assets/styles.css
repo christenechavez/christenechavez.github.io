@@ -158,6 +158,21 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
    Mobile polish + FULL-SCREEN OVERLAY MENU
    ========================= */
 @media (max-width:860px){
+  /* Show + style the Close button only on phones */
+  .menu-close{
+    display:inline-flex;
+    align-self:flex-end;
+    margin-bottom:24px;
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+    border-radius:14px;
+    padding:10px 14px;
+    font-size:16px;
+  }
+  .menu-close:active,
+  .menu-close:hover{ background:rgba(255,255,255,.09); }
+
   /* Basic mobile polish */
   .hero-wrap{ grid-template-columns:1fr !important; gap:18px; }
   .hero-title{ font-size:clamp(28px,8vw,40px); }
@@ -203,22 +218,6 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
     background:rgba(255,255,255,.09);
     text-decoration:none;
     transform:none;
-  }
-
-  /* Overlay close button */
-  .menu-close{
-    align-self:flex-end;
-    margin-bottom:24px;
-    background:transparent;
-    color:#fff;
-    border:2px solid #fff;
-    border-radius:14px;
-    padding:10px 14px;
-    font-size:16px;
-  }
-  .menu-close:active,
-  .menu-close:hover{
-    background:rgba(255,255,255,.09);
   }
 
   /* Prevent page scroll when menu open */
