@@ -145,6 +145,9 @@ hr.sep{border:none; border-top:1px solid rgba(0,0,0,.06); margin:20px 0}
 .site-footer nav a{ color:var(--warm); margin-right:12px; }
 .site-footer nav a:hover{ color:var(--accent); text-decoration:none; }
 
+/* Hide the injected Close button on desktop */
+.menu-close { display: none; }
+
 /* Medium screens */
 @media (min-width:861px) and (max-width:1100px){
   .btn{padding:8px 10px}
