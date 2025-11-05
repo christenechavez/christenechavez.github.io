@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NFL Tableau + Alteryx — Christene Chavez</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .image-viewer {
+      width:100%;
+      max-width:900px;
+      display:block;
+      margin:0 auto;
+      border:1px solid rgba(0,0,0,.1);
+      border-radius:12px;
+    }
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="brand"><a href="/index.html" style="text-decoration:none;color:inherit">Christene<span class="dot">.</span>Chavez</a></div>
+  <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+  <nav class="controls" id="site-links">
+    <a class="btn" href="/index.html">Home</a>
+    <a class="btn" href="/projects/index.html">Projects</a>
+  </nav>
+</header>
+
+<header class="hero">
+  <h1>NFL Tableau + Alteryx</h1>
+  <p>Data-prep and visualization workflow analyzing deep pass rates and scoring efficiency.</p>
+</header>
+
+<main class="wrap">
+  <img src="../assets/images/NFL Tableau Alteryx Preview.jpg" alt="NFL Tableau and Alteryx preview" class="image-viewer" />
+
+  <section style="max-width:900px;margin:1.5rem auto;">
+    <h2>Overview</h2>
+    <p>This project explores relationships between offensive play-calling and efficiency outcomes using <strong>Alteryx</strong> for data preparation and <strong>Tableau</strong> for interactive visualization.</p>
+
+    <h2>Approach</h2>
+    <ul>
+      <li>Cleaned and merged NFL play-by-play datasets in Alteryx.</li>
+      <li>Built visual dashboards highlighting deep-pass frequency vs. Expected Points Added (EPA).</li>
+      <li>Compared outcomes across game quarters and field positions.</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Showed clear trend between explosive plays and scoring outcomes.</li>
+      <li>Demonstrated the value of blending play-level analytics with visualization for communication.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="y"></span> Christene Chavez</p>
+  </div>
+</footer>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script src="/assets/script.js" defer></script>
+</body>
+</html>
