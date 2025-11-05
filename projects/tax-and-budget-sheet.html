@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tax &amp; Budget Sheet — Christene Chavez</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .pdf-viewer {
+      width: 100%;
+      height: 80vh;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="brand">
+    <a href="/index.html" style="text-decoration:none;color:inherit">
+      Christene<span class="dot">.</span>Chavez
+    </a>
+  </div>
+  <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+  <nav class="controls" id="site-links" aria-label="Primary navigation">
+    <a class="btn" href="/index.html">Home</a>
+    <a class="btn" href="/projects/index.html">Projects</a>
+  </nav>
+</header>
+
+<header class="hero">
+  <h1>Tax &amp; Budget Sheet</h1>
+  <p>Scenario model for comparing tax and budgeting outcomes.</p>
+</header>
+
+<main class="wrap">
+  <embed src="/assets/files/Tax%20and%20Budget%20Sheet.pdf" type="application/pdf" class="pdf-viewer" />
+
+  <p style="text-align:center;margin-top:1rem;">
+    <a class="btn" href="/assets/files/Tax%20and%20Budget%20Sheet.pdf" target="_blank" rel="noopener">Open PDF</a>
+    <a class="btn" href="/assets/files/Tax%20and%20Budget%20Sheet.xlsx" download>Download Excel</a>
+  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="y"></span> Christene Chavez</p>
+  </div>
+</footer>
+<script>
+  const y = document.getElementById('y');
+  if (y) y.textContent = new Date().getFullYear();
+</script>
+<script src="/assets/script.js" defer></script>
+</body>
+</html>
