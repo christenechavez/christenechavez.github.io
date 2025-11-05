@@ -35,12 +35,8 @@
       background: #f7f5f2;
     }
     @media (max-width: 720px){
-      .project-card {
-        grid-template-columns: 1fr;
-      }
-      .project-card img {
-        height: 180px;
-      }
+      .project-card { grid-template-columns: 1fr; }
+      .project-card img { height: 180px; }
     }
     .project-card h3 {
       color: var(--primary);
@@ -72,7 +68,7 @@
       border: 1px solid rgba(0,0,0,.08);
     }
 
-    /* modal for image preview */
+    /* image modal */
     .modal {
       position: fixed;
       inset: 0;
@@ -125,3 +121,130 @@
   <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
   <nav class="controls" id="site-links" aria-label="Primary navigation">
     <a class="btn" href="/index.html">Home</a>
+    <a class="btn" href="/resume/index.html">Resume</a>
+    <a class="btn" href="/experience.html">Experience</a>
+    <a class="btn" href="/education.html">Education</a>
+    <a class="btn" href="/projects/index.html">Projects</a>
+    <a class="btn" href="/writing/index.html">Writing</a>
+    <a class="btn" href="/contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page-wrap">
+  <h1>Projects</h1>
+  <p class="lead">Click a project to view the full piece. Images open larger. Tax &amp; Budget Sheet still has a downloadable Excel version.</p>
+
+  <!-- Analyst Presentation -->
+  <article class="project-card">
+    <img src="../assets/images/Presentation%20Preview.jpg" alt="Analyst Presentation preview" data-full="../assets/images/Presentation%20Preview.jpg">
+    <div>
+      <h3><a href="/projects/analyst-presentation.html" style="text-decoration:none;color:inherit;">Analyst Presentation</a></h3>
+      <p>End-to-end presentation showing SAP-style steps, data accuracy checks, and reporting.</p>
+      <div class="btn-row">
+        <a class="btn" href="/projects/analyst-presentation.html">View project →</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Altair AI -->
+  <article class="project-card">
+    <img src="../assets/images/Altair AI Preview.jpg" alt="Altair AI preview" data-full="../assets/images/Altair AI Preview.jpg">
+    <div>
+      <h3><a href="/projects/altair-ai.html" style="text-decoration:none;color:inherit;">Altair AI</a></h3>
+      <p>Combined model evaluation and executive summary for fraud detection improvements.</p>
+      <div class="btn-row">
+        <a class="btn" href="/projects/altair-ai.html">View project →</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- NFL Tableau + Alteryx -->
+  <article class="project-card">
+    <img src="../assets/images/NFL Tableau Alteryx Preview.jpg" alt="NFL Tableau + Alteryx preview" data-full="../assets/images/NFL Tableau Alteryx Preview.jpg">
+    <div>
+      <h3><a href="/projects/nfl-tableau-alteryx.html" style="text-decoration:none;color:inherit;">NFL Tableau + Alteryx</a></h3>
+      <p>Data-prep and visualization workflow exploring playcalling vs scoring outcomes.</p>
+      <div class="btn-row">
+        <a class="btn" href="/projects/nfl-tableau-alteryx.html">View project →</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Tax & Budget Sheet -->
+  <article class="project-card">
+    <img src="../assets/images/Tax and Budget Sheet Preview.jpg" alt="Tax and Budget Sheet preview" data-full="../assets/images/Tax and Budget Sheet Preview.jpg">
+    <div>
+      <h3><a href="/projects/tax-and-budget-sheet.html" style="text-decoration:none;color:inherit;">Tax &amp; Budget Sheet</a></h3>
+      <p>Scenario-based tax and budgeting model. Viewable in-browser, with original Excel available.</p>
+      <div class="btn-row">
+        <a class="btn" href="/projects/tax-and-budget-sheet.html">View project →</a>
+        <a class="btn secondary" href="../assets/files/Tax and Budget Sheet.xlsx" download>Download Excel</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Corporate Tax Return (KPMG) -->
+  <article class="project-card">
+    <img src="../assets/images/KPMG Preview.jpg" alt="Corporate Tax Return preview" data-full="../assets/images/KPMG Preview.jpg">
+    <div>
+      <h3><a href="/projects/kpmg-corporate-tax-return.html" style="text-decoration:none;color:inherit;">Corporate Tax Return (KPMG)</a></h3>
+      <p>Prepared corporate return packet with schedules, reconciliations, and documentation.</p>
+      <div class="btn-row">
+        <a class="btn" href="/projects/kpmg-corporate-tax-return.html">View project →</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="y"></span> Christene Chavez</p>
+    <nav aria-label="Contact">
+      <a href="mailto:youremail@domain.com">Email</a>
+      <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/christenechavez" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- image modal -->
+<div class="modal" id="imgModal" aria-modal="true" role="dialog" aria-label="Project image viewer">
+  <div class="modal-inner">
+    <button class="modal-close" type="button" aria-label="Close">Close ✕</button>
+    <img id="modalImg" src="" alt="Project view" />
+  </div>
+</div>
+
+<script>
+  // year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // modal
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = modal.querySelector('.modal-close');
+
+  function openModal(src){
+    modalImg.src = src;
+    modal.setAttribute('open','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.removeAttribute('open');
+    modalImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('img[data-full]').forEach(img=>{
+    img.addEventListener('click', ()=> openModal(img.getAttribute('data-full')));
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+</script>
+
+<!-- nav / hamburger -->
+<script src="../assets/script.js" defer></script>
+</body>
+</html>
