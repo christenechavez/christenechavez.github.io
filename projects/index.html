@@ -14,7 +14,6 @@
     .page-wrap h1 { color: var(--primary); margin-bottom: 6px; }
     .lead { color: var(--muted); margin: 0 0 18px; }
 
-    /* project cards similar to writing cards but with image */
     .project-card {
       background: #fff;
       border-radius: 12px;
@@ -52,7 +51,7 @@
       margin: 0 0 8px;
       line-height: 1.5;
     }
-    .project-card .btn-row {
+    .btn-row {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
@@ -73,7 +72,7 @@
       border: 1px solid rgba(0,0,0,.08);
     }
 
-    /* modal for image preview (kept from your old page) */
+    /* modal for image preview */
     .modal {
       position: fixed;
       inset: 0;
@@ -123,32 +122,6 @@
       Christene<span class="dot">.</span>Chavez
     </a>
   </div>
-
   <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
-
   <nav class="controls" id="site-links" aria-label="Primary navigation">
     <a class="btn" href="/index.html">Home</a>
-    <a class="btn" href="/resume/index.html">Resume</a>
-    <a class="btn" href="/experience.html">Experience</a>
-    <a class="btn" href="/education.html">Education</a>
-    <a class="btn" href="/projects/index.html">Projects</a>
-    <a class="btn" href="/writing/index.html">Writing</a>
-    <a class="btn" href="/contact.html">Contact</a>
-  </nav>
-</header>
-
-<main class="page-wrap">
-  <h1>Projects</h1>
-  <p class="lead">Portfolio-style view of analytics, tax, and reporting work. Click to open the full project page; some items also have source files to download.</p>
-
-  <section id="project-list" aria-live="polite">
-    <!-- JS will inject cards here -->
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© <span id="y"></span> Christene Chavez</p>
-    <nav aria-label="Contact">
-      <a href="mailto:youremail@domain.com">Email</a>
-      <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel_
