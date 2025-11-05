@@ -1,80 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Projects — Christene Chavez</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css">
   <style>
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      border-radius:12px;
-      border:1px solid rgba(0,0,0,.06);
-      cursor:pointer;
+    .page-wrap {
+      max-width: 1100px;
+      margin: 28px auto 48px;
+      padding: 0 20px;
     }
+    .page-wrap h1 { color: var(--primary); margin-bottom: 6px; }
+    .lead { color: var(--muted); margin: 0 0 18px; }
 
-    .card .btn{
-      display:inline-block;
-      min-width:auto;
-      flex: initial;
-      padding:8px 12px;
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:999px;
-      background:#fff;
-      box-shadow:var(--shadow);
-      text-decoration:none;
+    /* project cards similar to writing cards but with image */
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow, 0 1px 4px rgba(0,0,0,.08));
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      align-items: start;
     }
-    @media (max-width:860px){
-      .card .btn{
-        min-width:auto;
-        flex:0 1 auto;
-        padding:10px 12px;
+    .project-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,.04);
+      cursor: pointer;
+      background: #f7f5f2;
+    }
+    @media (max-width: 720px){
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+      .project-card img {
+        height: 180px;
       }
     }
-
-    .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
-
-    .card details{
-      margin-top:8px;
-      background:#fffdf8;
-      border:1px solid rgba(0,0,0,.06);
-      border-radius:12px;
-      padding:8px 10px;
+    .project-card h3 {
+      color: var(--primary);
+      margin: 0 0 6px;
     }
-    .card details summary{
-      cursor:pointer;
-      font-weight:700;
-      color:var(--primary);
-      list-style:none;
+    .project-card p {
+      color: var(--muted);
+      margin: 0 0 8px;
+      line-height: 1.5;
     }
-    .card details[open] summary{ color:var(--accent); }
-    .card details .case{ margin-top:6px; }
-    .card details h4{ margin:8px 0 4px; color:var(--primary); }
+    .project-card .btn-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .project-card a.btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: .85rem;
+    }
+    .project-card a.btn.secondary {
+      background: #fff;
+      color: var(--primary);
+      border: 1px solid rgba(0,0,0,.08);
+    }
 
+    /* modal for image preview (kept from your old page) */
     .modal {
-      position: fixed; inset: 0;
+      position: fixed;
+      inset: 0;
       background: rgba(0,0,0,.75);
-      display: none; align-items: center; justify-content: center;
-      padding: 20px; z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 9999;
     }
     .modal[open] { display: flex; }
     .modal-inner {
       max-width: min(1100px, 96vw);
       max-height: 90vh;
-      background: #fff; border-radius: 16px;
-      padding: 10px; box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      background: #fff;
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
       position: relative;
     }
     .modal-inner img {
-      display: block; max-width: 100%; max-height: 80vh; height: auto; width: auto; margin: 0 auto;
+      display: block;
+      max-width: 100%;
+      max-height: 80vh;
+      height: auto;
+      width: auto;
+      margin: 0 auto;
       border-radius: 12px;
     }
     .modal-close {
-      position: absolute; top: 8px; right: 8px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
       border: 1px solid rgba(0,0,0,.12);
-      background: #fff; border-radius: 10px; padding: 6px 10px; cursor: pointer;
+      background: #fff;
+      border-radius: 10px;
+      padding: 6px 10px;
+      cursor: pointer;
       font-size: 16px;
     }
   </style>
@@ -100,186 +137,18 @@
   </nav>
 </header>
 
-<header class="hero">
+<main class="page-wrap">
   <h1>Projects</h1>
-  <p>Click a card to view the full project. Some include downloadable files.</p>
-</header>
+  <p class="lead">Portfolio-style view of analytics, tax, and reporting work. Click to open the full project page; some items also have source files to download.</p>
 
-<main class="grid">
-  <!-- Analyst Presentation (NEW) -->
-  <article class="card">
-    <img src="../assets/images/Presentation%20Preview.jpg" alt="Analyst Presentation preview"
-         data-full="../assets/images/Presentation%20Preview.jpg">
-    <h3>Analyst Presentation</h3>
-    <p>End-to-end presentation of SAP steps, data checks, and reporting.</p>
-    <div class="btn-row">
-      <a class="btn" href="/projects/analyst-presentation.html">View Project</a>
-    </div>
-    <details>
-      <summary>Read More</summary>
-      <div class="case">
-        <h4>Includes</h4>
-        <ul>
-          <li>Process breakdown</li>
-          <li>Data accuracy checks</li>
-          <li>Report validation</li>
-        </ul>
-      </div>
-    </details>
-  </article>
-
-  <!-- Altair AI (combined) -->
-  <article class="card">
-    <img src="../assets/images/Altair AI Preview.jpg" alt="Altair AI preview"
-         data-full="../assets/images/Altair AI Preview.jpg">
-    <h3>Altair AI</h3>
-    <p>Model evaluation and executive-style summary for fraud detection.</p>
-    <div class="btn-row">
-      <a class="btn" href="/projects/altair-ai.html">View Project</a>
-    </div>
-    <details>
-      <summary>Read More</summary>
-      <div class="case">
-        <h4>What’s in it</h4>
-        <ul>
-          <li>Performance review</li>
-          <li>Risks & mitigation</li>
-          <li>Recommendations</li>
-        </ul>
-      </div>
-    </details>
-  </article>
-
-  <!-- NFL Tableau + Alteryx -->
-  <article class="card">
-    <img src="../assets/images/NFL Tableau Alteryx Preview.jpg" alt="NFL Tableau/Alteryx preview"
-         data-full="../assets/images/NFL Tableau Alteryx Preview.jpg">
-    <h3>NFL Tableau + Alteryx</h3>
-    <p>Exploratory dashboarding linking deep pass rate to scoring outcomes.</p>
-    <div class="btn-row">
-      <a class="btn" href="#" data-view="../assets/images/NFL Tableau Alteryx Preview.jpg">View File</a>
-    </div>
-    <details>
-      <summary>Read More</summary>
-      <div class="case">
-        <h4>Problem</h4>
-        <p>Explore relationships between playcalling and efficiency outcomes.</p>
-        <h4>Approach</h4>
-        <ul>
-          <li>Prep with Alteryx; visualize trends/filters in Tableau.</li>
-          <li>Compared segments (quarters, field position).</li>
-        </ul>
-        <h4>Results</h4>
-        <ul>
-          <li>Surfaced patterns in explosive plays vs. EPA.</li>
-        </ul>
-        <h4>Tools</h4>
-        <p>Alteryx, Tableau.</p>
-      </div>
-    </details>
-  </article>
-
-  <!-- Tax & Budget Sheet -->
-  <article class="card">
-    <img src="../assets/images/Tax and Budget Sheet Preview.jpg" alt="Tax and Budget Sheet preview"
-         data-full="../assets/images/Tax and Budget Sheet Preview.jpg">
-    <h3>Tax &amp; Budget Sheet</h3>
-    <p>Tax calculation tool and budgeting inputs for scenario analysis.</p>
-    <div class="btn-row">
-      <a class="btn" href="/projects/tax-and-budget-sheet.html">View Project</a>
-      <a class="btn" href="../assets/files/Tax and Budget Sheet.xlsx" download>Download Excel</a>
-    </div>
-    <details>
-      <summary>Read More</summary>
-      <div class="case">
-        <h4>Outcome</h4>
-        <ul>
-          <li>Faster what-if analysis</li>
-          <li>Clear inputs/outputs</li>
-        </ul>
-      </div>
-    </details>
-  </article>
-
-  <!-- Corporate Tax Return (KPMG) -->
-  <article class="card">
-    <img src="../assets/images/KPMG Preview.jpg" alt="KPMG tax return preview"
-         data-full="../assets/images/KPMG Preview.jpg">
-    <h3>Corporate Tax Return (KPMG)</h3>
-    <p>Prepared corporate return packet with schedules and supporting documentation.</p>
-    <div class="btn-row">
-      <a class="btn" href="#" data-view="../assets/images/KPMG Preview.jpg">View File</a>
-    </div>
-    <details>
-      <summary>Read More</summary>
-      <div class="case">
-        <h4>Scope</h4>
-        <ul>
-          <li>Assembled schedules and reconciliations.</li>
-          <li>Checked consistency across statements.</li>
-        </ul>
-        <h4>What I Learned</h4>
-        <ul>
-          <li>Documentation discipline and review workflows.</li>
-        </ul>
-      </div>
-    </details>
-  </article>
+  <section id="project-list" aria-live="polite">
+    <!-- JS will inject cards here -->
+  </section>
 </main>
-
-<div class="modal" id="imgModal" aria-modal="true" role="dialog" aria-label="Project image viewer">
-  <div class="modal-inner">
-    <button class="modal-close" type="button" aria-label="Close">Close ✕</button>
-    <img id="modalImg" src="" alt="Project view" />
-  </div>
-</div>
 
 <footer class="site-footer">
   <div class="wrap">
     <p>© <span id="y"></span> Christene Chavez</p>
     <nav aria-label="Contact">
       <a href="mailto:youremail@domain.com">Email</a>
-      <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/christenechavez" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-  </div>
-</footer>
-
-<script>
-  (function(){ var el=document.getElementById('y'); if(el) el.textContent=new Date().getFullYear(); })();
-
-  const modal = document.getElementById('imgModal');
-  const modalImg = document.getElementById('modalImg');
-  const closeBtn = modal.querySelector('.modal-close');
-
-  function openModal(src) {
-    modalImg.src = src;
-    modal.setAttribute('open', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal() {
-    modal.removeAttribute('open');
-    modalImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('article.card img[data-full]').forEach(img=>{
-    img.addEventListener('click', ()=>{
-      openModal(img.getAttribute('data-full'));
-    });
-  });
-
-  document.querySelectorAll('a[data-view]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      e.preventDefault();
-      openModal(a.getAttribute('data-view'));
-    });
-  });
-
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
-  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
-</script>
-<script src="/assets/script.js" defer></script>
-</body>
-</html>
+      <a href="https://www.linkedin.com/in/christenechavez" target="_blank" rel_
