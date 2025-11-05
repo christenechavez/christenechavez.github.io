@@ -15,7 +15,6 @@
       cursor:pointer;
     }
 
-    /* Keep card buttons tidy and independent from global .btn in nav */
     .card .btn{
       display:inline-block;
       min-width:auto;
@@ -37,7 +36,6 @@
 
     .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
 
-    /* Optional: nicer details styling */
     .card details{
       margin-top:8px;
       background:#fffdf8;
@@ -55,7 +53,6 @@
     .card details .case{ margin-top:6px; }
     .card details h4{ margin:8px 0 4px; color:var(--primary); }
 
-    /* Simple image modal */
     .modal {
       position: fixed; inset: 0;
       background: rgba(0,0,0,.75);
@@ -90,10 +87,8 @@
     </a>
   </div>
 
-  <!-- Hamburger (keep it here, after .brand) -->
   <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
 
-  <!-- Controls: convert to <nav> for clarity -->
   <nav class="controls" id="site-links" aria-label="Primary navigation">
     <a class="btn" href="/index.html">Home</a>
     <a class="btn" href="/resume/index.html">Resume</a>
@@ -107,62 +102,49 @@
 
 <header class="hero">
   <h1>Projects</h1>
-  <p>Click a card image or “View File” to see a preview. “Download Excel” is available where relevant.</p>
+  <p>Click a card to view the full project. Some include downloadable files.</p>
 </header>
 
 <main class="grid">
-  <!-- Altair AI -->
+  <!-- Analyst Presentation (NEW) -->
   <article class="card">
-    <img src="../assets/images/Altair AI Preview.jpg" alt="Altair AI preview"
-         data-full="../assets/images/Altair AI Preview.jpg">
-    <h3>Altair AI</h3>
-    <p>Model evaluation summary and recommendations for fraud detection improvements.</p>
+    <img src="../assets/images/Presentation%20Preview.jpg" alt="Analyst Presentation preview"
+         data-full="../assets/images/Presentation%20Preview.jpg">
+    <h3>Analyst Presentation</h3>
+    <p>End-to-end presentation of SAP steps, data checks, and reporting.</p>
     <div class="btn-row">
-      <a class="btn" href="#" data-view="../assets/images/Altair AI Preview.jpg">View File</a>
+      <a class="btn" href="/projects/analyst-presentation.html">View Project</a>
     </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
-        <h4>Problem</h4>
-        <p>Stakeholders needed a concise assessment of a fraud model’s performance with clear trade-offs.</p>
-        <h4>Approach</h4>
+        <h4>Includes</h4>
         <ul>
-          <li>Benchmarked precision/recall and calibrated thresholds.</li>
-          <li>Identified data leakage risks and feature drift.</li>
-          <li>Proposed monitoring and retraining cadence.</li>
+          <li>Process breakdown</li>
+          <li>Data accuracy checks</li>
+          <li>Report validation</li>
         </ul>
-        <h4>Results</h4>
-        <ul>
-          <li>Reduced false positives in recommended operating point.</li>
-          <li>Clear next steps for data quality checks and iteration.</li>
-        </ul>
-        <h4>My Role</h4>
-        <p>Analysis, documentation, and executive summary.</p>
       </div>
     </details>
   </article>
 
-  <!-- Altair AI — Summary -->
+  <!-- Altair AI (combined) -->
   <article class="card">
-    <img src="../assets/images/Altair AI Summary Preview.jpg" alt="Altair AI summary preview"
-         data-full="../assets/images/Altair AI Summary Preview.jpg">
-    <h3>Altair AI — Summary</h3>
-    <p>Executive summary of findings, assumptions, and next-step actions.</p>
+    <img src="../assets/images/Altair AI Preview.jpg" alt="Altair AI preview"
+         data-full="../assets/images/Altair AI Preview.jpg">
+    <h3>Altair AI</h3>
+    <p>Model evaluation and executive-style summary for fraud detection.</p>
     <div class="btn-row">
-      <a class="btn" href="#" data-view="../assets/images/Altair AI Summary Preview.jpg">View File</a>
+      <a class="btn" href="/projects/altair-ai.html">View Project</a>
     </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
-        <h4>At a Glance</h4>
+        <h4>What’s in it</h4>
         <ul>
-          <li>Audience: leadership</li>
-          <li>Deliverable: 1-page brief + appendix</li>
-        </ul>
-        <h4>Highlights</h4>
-        <ul>
-          <li>Business-impact framing before metrics.</li>
-          <li>Risk and mitigation table for decision clarity.</li>
+          <li>Performance review</li>
+          <li>Risks & mitigation</li>
+          <li>Recommendations</li>
         </ul>
       </div>
     </details>
@@ -197,32 +179,24 @@
     </details>
   </article>
 
-  <!-- Tax & Budget Sheet (Excel): allow download -->
+  <!-- Tax & Budget Sheet -->
   <article class="card">
     <img src="../assets/images/Tax and Budget Sheet Preview.jpg" alt="Tax and Budget Sheet preview"
          data-full="../assets/images/Tax and Budget Sheet Preview.jpg">
     <h3>Tax &amp; Budget Sheet</h3>
-    <p>Parameterized tax calculation tool and budgeting inputs for scenario analysis.</p>
+    <p>Tax calculation tool and budgeting inputs for scenario analysis.</p>
     <div class="btn-row">
-      <a class="btn" href="#" data-view="../assets/images/Tax and Budget Sheet Preview.jpg">View File</a>
+      <a class="btn" href="/projects/tax-and-budget-sheet.html">View Project</a>
       <a class="btn" href="../assets/files/Tax and Budget Sheet.xlsx" download>Download Excel</a>
     </div>
     <details>
       <summary>Read More</summary>
       <div class="case">
-        <h4>Problem</h4>
-        <p>Users needed quick comparisons across tax scenarios and budgets.</p>
-        <h4>Approach</h4>
-        <ul>
-          <li>Excel model with clear inputs, assumptions, and outputs.</li>
-          <li>Data validation + conditional formatting for guardrails.</li>
-        </ul>
         <h4>Outcome</h4>
         <ul>
-          <li>Faster what-if analysis for common cases.</li>
+          <li>Faster what-if analysis</li>
+          <li>Clear inputs/outputs</li>
         </ul>
-        <h4>My Role</h4>
-        <p>Model design and documentation.</p>
       </div>
     </details>
   </article>
@@ -253,7 +227,6 @@
   </article>
 </main>
 
-<!-- Image Modal -->
 <div class="modal" id="imgModal" aria-modal="true" role="dialog" aria-label="Project image viewer">
   <div class="modal-inner">
     <button class="modal-close" type="button" aria-label="Close">Close ✕</button>
@@ -273,10 +246,8 @@
 </footer>
 
 <script>
-  // Year stamp
   (function(){ var el=document.getElementById('y'); if(el) el.textContent=new Date().getFullYear(); })();
 
-  // Modal logic
   const modal = document.getElementById('imgModal');
   const modalImg = document.getElementById('modalImg');
   const closeBtn = modal.querySelector('.modal-close');
@@ -292,14 +263,12 @@
     document.body.style.overflow = '';
   }
 
-  // Open from image click
   document.querySelectorAll('article.card img[data-full]').forEach(img=>{
     img.addEventListener('click', ()=>{
       openModal(img.getAttribute('data-full'));
     });
   });
 
-  // Open from "View File" buttons
   document.querySelectorAll('a[data-view]').forEach(a=>{
     a.addEventListener('click', (e)=>{
       e.preventDefault();
@@ -307,11 +276,10 @@
     });
   });
 
-  // Close actions
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
   document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
 </script>
-  <script src="/assets/script.js" defer></script>
+<script src="/assets/script.js" defer></script>
 </body>
 </html>
