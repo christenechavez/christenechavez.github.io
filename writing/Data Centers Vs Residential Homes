@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Evaluating Data Centers and Residential Development • Writing • Christene Chavez</title>
+
+  <link rel="stylesheet" href="../assets/styles.css" />
+
+  <meta
+    name="description"
+    content="A comparative framework for evaluating the fiscal, infrastructure, utility, and economic impacts of data-center investment and residential development."
+  />
+
+  <style>
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+
+    .article-body th,
+    .article-body td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.75rem;
+      border: 1px solid rgba(0,0,0,.15);
+    }
+
+    .article-body th {
+      font-weight: 700;
+    }
+
+    .article-body caption {
+      text-align: left;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .article-body h2 {
+      margin-top: 2rem;
+    }
+
+    .article-body h3 {
+      margin-top: 1.5rem;
+    }
+
+    .note {
+      padding: 1rem;
+      margin: 1.25rem 0;
+      border-left: 4px solid var(--accent);
+      background: rgba(0,0,0,.03);
+    }
+
+    .sources li {
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Unified header -->
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="brand">
+      <a href="/index.html" style="text-decoration:none;color:inherit">
+        Christene<span class="dot">.</span>Chavez
+      </a>
+    </div>
+
+    <button
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="site-links"
+      aria-label="Menu">
+      ☰
+    </button>
+
+    <div id="site-links" class="controls">
+      <a class="btn" href="/index.html">Home</a>
+      <a class="btn" href="/resume/index.html">Resume</a>
+      <a class="btn" href="/experience.html">Experience</a>
+      <a class="btn" href="/education.html">Education</a>
+      <a class="btn" href="/projects/index.html">Projects</a>
+      <a class="btn" href="/writing/index.html">Writing</a>
+      <a class="btn" href="/contact.html">Contact</a>
+    </div>
+  </nav>
+
+
+  <main class="article">
+    <article>
+
+      <header class="article-header">
+        <h1>Evaluating Data Centers and Residential Development</h1>
+        <p class="subtitle">
+          A Comparative Framework for Fiscal, Infrastructure, and Utility Impacts
+        </p>
+      </header>
+
+
+      <section class="article-body">
+
+        <!-- Executive Summary -->
+        <h2>Executive Summary</h2>
+
+        <p>
+          Communities evaluating new development often face a difficult question:
+          which types of growth create the greatest long-term public value?
+          Residential development and large data centers create value in very
+          different ways. Residential development spreads economic activity across
+          households, local businesses, and public services, while data centers
+          concentrate substantial capital investment and infrastructure demand at
+          a single site.
+        </p>
+
+        <p>
+          Using Jefferson County, Alabama, as an illustrative residential benchmark,
+          a 1,000-home development represents approximately $240 million in residential
+          property value and about $1.4 million in estimated annual property taxes.
+          Based on median household income of $69,346, those households also represent
+          approximately $69.3 million in aggregate annual income.
+        </p>
+
+        <p>
+          If 40% to 60% of that income were spent on purchases subject to Alabama's
+          4% general state sales-tax rate, the illustrative state sales-tax contribution
+          would be approximately $1.1 million to $1.7 million annually. Combined with
+          the property-tax estimate, the two identified tax categories create a
+          residential comparison benchmark of approximately $2.5 million to
+          $3.1 million annually before local taxes, other revenue, and public-service costs.
+        </p>
+
+        <aside class="note" aria-label="Methodology note">
+          <strong>Important:</strong>
+          The sales-tax estimate is an illustrative scenario rather than a forecast
+          of actual collections. The analysis assumes that 40% to 60% of aggregate
+          household income is spent on purchases subject to Alabama's 4% general
+          state sales-tax rate.
+        </aside>
+
+        <p>
+          The selected Alabama data-center projects used in this comparison represent
+          announced investments ranging from approximately $372 million to $14.5 billion,
+          with a median of $1.5 billion and a simple average of approximately
+          $3.75 billion.
+        </p>
+
+        <p>
+          The selected projects therefore operate at a substantially larger capital
+          scale than the illustrative residential development. Capital investment
+          alone, however, does not determine which form of development creates greater
+          public value. The comparison depends on how investment translates into
+          recurring tax revenue, utility economics, employment, infrastructure
+          requirements, incentives, and public-service costs.
+        </p>
+
+
+        <!-- Comparison Table -->
+        <h2>Comparison of Identified Benefits and Performance Conditions</h2>
+
+        <div class="table-wrap" role="region" aria-label="Development comparison table" tabindex="0">
+          <table>
+            <caption>
+              Comparison of an illustrative 1,000-home development and a large data center
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Measure</th>
+                <th scope="col">1,000 Homes</th>
+                <th scope="col">Large Data Center</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Property value or announced investment</th>
+                <td>Approximately $240 million</td>
+                <td>Approximately $372 million to $14.5 billion among selected projects</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Reference point for comparison</th>
+                <td>Approximately $240 million</td>
+                <td>$1.5 billion median; approximately $3.75 billion simple average</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Estimated annual property tax</th>
+                <td>Approximately $1.4 million</td>
+                <td>Depends on assessed value, applicable tax rates, and incentives or abatements</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Illustrative Alabama state sales tax</th>
+                <td>Approximately $1.1 million to $1.7 million</td>
+                <td>Depends on taxable construction and operating activity and applicable incentives</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Identified residential tax benchmark</th>
+                <td>Approximately $2.5 million to $3.1 million annually</td>
+                <td>Can be compared with retained recurring taxes and other measurable project benefits</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Utility considerations</th>
+                <td>Distributed residential demand for electricity, water, and sewer services</td>
+                <td>Large concentrated demand that may require significant utility infrastructure</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Overall performance question</th>
+                <td colspan="2">
+                  Which development produces the greater net public and economic benefit
+                  after recurring revenue, infrastructure requirements, incentives,
+                  utility impacts, and public-service costs are considered?
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <!-- Section 1 -->
+        <h2>1. What Each Development Brings to a Community</h2>
+
+        <p>
+          Residential development distributes economic activity across households
+          and businesses. Residents pay property taxes and utility bills, make taxable
+          purchases, register vehicles, and support nearby employers. Home construction
+          can also generate permits, inspection fees, connection charges, contractor
+          activity, and taxable purchases.
+        </p>
+
+        <p>
+          Those benefits must also be considered alongside the continuing costs of
+          serving residential growth, including schools, roads, public safety,
+          sanitation, stormwater management, water, and wastewater service.
+        </p>
+
+        <p>
+          A data center creates a different economic profile. Instead of distributing
+          investment among hundreds or thousands of households, a data center
+          concentrates significant capital investment and utility demand at a single
+          site. Potential benefits can include property taxes retained after incentives,
+          construction activity, permanent employment, supplier activity, and
+          infrastructure investment.
+        </p>
+
+        <p>
+          Data-center development can also create substantial infrastructure
+          requirements. A balanced analysis therefore needs to consider incentives,
+          public infrastructure, utility requirements, water and sewer needs, and
+          the continuing costs associated with supporting the facility.
+        </p>
+
+        <p>
+          The expanded Meta campus in Montgomery illustrates the distinction between
+          capital scale and employment impact. Public announcements associated with the
+          project reported more than $1.5 billion in investment, more than 100 operational
+          jobs, and more than 1,500 skilled-trade workers at peak construction.
+          Capital investment, temporary construction activity, permanent employment,
+          and recurring tax collections should therefore be evaluated as separate
+          measures rather than treated as interchangeable benefits.
+        </p>
+
+
+        <!-- Section 2 -->
+        <h2>2. When Data-Center Investment Produces Public Value</h2>
+
+        <p>
+          Data-center investment creates public value when large capital commitments
+          translate into measurable long-term benefits such as retained tax revenue,
+          employment, supplier activity, infrastructure investment, and sustainable
+          utility economics.
+        </p>
+
+        <p>
+          Alabama's Chapter 9B program allows qualifying projects to receive abatements
+          of specified state and local sales, use, and non-educational property taxes.
+          For qualifying data-processing centers receiving abatements before
+          January 1, 2027, the published framework provides potential 10-, 20-, or
+          30-year abatement periods based on applicable investment thresholds.
+        </p>
+
+        <p>
+          Incentives make it especially important to distinguish between the size of
+          an announced investment and the amount of recurring public revenue that
+          ultimately remains with state and local governments. State, county,
+          municipal, school, and other public benefits may differ depending on the
+          structure of the project and applicable incentive agreements.
+        </p>
+
+        <p>
+          Separate Alabama Jobs Act incentives may also affect the comparison.
+          Published program materials describe a Jobs Credit based on eligible
+          Alabama-resident payroll and an Investment Credit of up to 1.5% annually
+          of qualified capital investment, subject to eligibility, duration, and
+          approval requirements.
+        </p>
+
+        <p>
+          Utility economics represent another part of the analysis. From a
+          utility-economics perspective, large-load development can be evaluated by
+          comparing the revenue associated with new electricity demand against the
+          incremental generation, transmission, distribution, and other infrastructure
+          required to serve it.
+        </p>
+
+        <p>
+          A more complete project-level comparison would require additional inputs,
+          including assessed value, taxes retained after incentives, permanent payroll,
+          infrastructure requirements, public-service costs, and the incremental costs
+          and revenues associated with utility service.
+        </p>
+
+
+        <!-- Section 3 -->
+        <h2>3. Conditions Under Which Each Development Performs Better</h2>
+
+        <div class="table-wrap" role="region" aria-label="Development performance conditions table" tabindex="0">
+          <table>
+            <caption>
+              Conditions that influence the relative performance of residential and data-center development
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Performance Condition</th>
+                <th scope="col">Residential Development Performs Better When</th>
+                <th scope="col">Data Center Performs Better When</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Recurring tax revenue</th>
+                <td>
+                  Net recurring taxes and related revenue exceed the public-service
+                  costs associated with residential growth.
+                </td>
+                <td>
+                  Retained annual taxes after incentives exceed the comparable
+                  residential contribution after relevant project costs are considered.
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Utility economics</th>
+                <td>
+                  Residential utility revenue produces a positive contribution after
+                  the incremental costs of providing electric, water, and sewer service.
+                </td>
+                <td>
+                  Revenue associated with the large load exceeds the incremental costs
+                  of infrastructure and service required to support it.
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Infrastructure</th>
+                <td>
+                  Developer contributions and recurring public revenue cover the
+                  additional infrastructure and services required by residential growth.
+                </td>
+                <td>
+                  Project-related infrastructure requirements are appropriately funded
+                  and do not outweigh the project's recurring public benefits.
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Water use</th>
+                <td>
+                  Residential development creates greater net public value relative
+                  to its water and wastewater requirements.
+                </td>
+                <td>
+                  The project's economic contribution remains favorable after its
+                  water, wastewater, and infrastructure requirements are considered.
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Overall result</th>
+                <td>
+                  Residential development creates the greater recurring net public
+                  and economic benefit.
+                </td>
+                <td>
+                  The data center creates the greater recurring net public and
+                  economic benefit.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <!-- Utility and Infrastructure Considerations -->
+        <h2>4. Utility and Infrastructure Considerations</h2>
+
+        <p>
+          Utility performance should be evaluated on the basis of net contribution
+          rather than gross revenue alone. A complete analysis would consider expected
+          electricity demand, required infrastructure, generation and transmission
+          needs, cost recovery, and the incremental costs associated with serving
+          the new load.
+        </p>
+
+        <p>
+          Water and wastewater systems require similar analysis. Revenue generated by
+          new customers should be considered alongside system capacity, treatment,
+          pumping, infrastructure, and operating costs.
+        </p>
+
+        <p>
+          For example, Jefferson County sewer bills include both fixed and volumetric
+          charges based partly on metered water use. The county generally applies a
+          return factor for residential customers to recognize that some water use
+          does not return to the sewer system.
+        </p>
+
+        <p>
+          Community performance should therefore be measured using a broader set of
+          outcomes than any single metric. Tax revenue, economic activity, infrastructure
+          costs, utility requirements, public services, employment, and resource use
+          all contribute to the final comparison.
+        </p>
+
+
+        <!-- Quantitative Comparison -->
+        <h2>5. Quantitative Comparison</h2>
+
+        <h3>Capital Scale</h3>
+
+        <div class="table-wrap" role="region" aria-label="Capital scale comparison table" tabindex="0">
+          <table>
+            <caption>
+              Capital scale of the illustrative residential development and selected Alabama data-center projects
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Development Type</th>
+                <th scope="col">Illustrative or Announced Value</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1,000 Jefferson County homes</th>
+                <td>Approximately $240 million</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Selected data-center minimum</th>
+                <td>Approximately $372 million</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Selected data-center median</th>
+                <td>Approximately $1.5 billion</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Selected data-center simple average</th>
+                <td>Approximately $3.75 billion</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Selected data-center maximum</th>
+                <td>Approximately $14.5 billion</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="muted">
+          The residential figure represents 1,000 homes multiplied by an
+          approximately $240,000 Jefferson County median home-value benchmark.
+          The selected data-center figures represent announced investments and
+          should not be interpreted as assessed property values or annual tax collections.
+        </p>
+
+        <p>
+          The selected projects have a median announced investment of approximately
+          $1.5 billion and a simple average of approximately $3.75 billion. The median
+          is approximately 6.25 times the illustrative residential property value,
+          while the average is approximately 15.6 times that value.
+        </p>
+
+        <p>
+          These comparisons demonstrate differences in capital scale. They do not,
+          by themselves, establish which form of development produces more annual
+          tax revenue or greater overall public value.
+        </p>
+
+
+        <h3>Illustrative Residential Tax Benchmark</h3>
+
+        <div class="table-wrap" role="region" aria-label="Residential tax benchmark table" tabindex="0">
+          <table>
+            <caption>
+              Illustrative annual tax benchmark for 1,000 Jefferson County homes
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Tax Category</th>
+                <th scope="col">Low Estimate</th>
+                <th scope="col">High Estimate</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Property tax</th>
+                <td>Approximately $1.4 million</td>
+                <td>Approximately $1.4 million</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Illustrative Alabama state sales tax</th>
+                <td>Approximately $1.1 million</td>
+                <td>Approximately $1.7 million</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Identified annual total</th>
+                <td>Approximately $2.5 million</td>
+                <td>Approximately $3.1 million</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The identified residential tax categories therefore total approximately
+          $2.5 million to $3.1 million annually. This figure establishes an
+          illustrative comparison benchmark rather than a complete break-even point
+          or forecast of actual collections.
+        </p>
+
+        <p>
+          The benchmark excludes local taxes, other forms of public revenue,
+          construction activity, broader economic effects, utility contribution,
+          and public-service costs. A complete development comparison should add
+          those categories consistently for both types of development.
+        </p>
+
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+
+        <p>
+          Using Jefferson County benchmarks, an illustrative 1,000-home development
+          represents approximately $240 million in residential property value and
+          approximately $2.5 million to $3.1 million in identified annual property
+          and Alabama state sales taxes before other revenues and public-service costs.
+        </p>
+
+        <p>
+          The selected Alabama data-center projects operate at a much larger capital
+          scale, with a median announced investment of approximately $1.5 billion
+          and a simple average of approximately $3.75 billion. That difference is
+          meaningful, but capital scale alone does not determine the better
+          development outcome.
+        </p>
+
+        <p>
+          A data center creates stronger results when its retained recurring taxes,
+          employment and supplier activity, infrastructure contributions, and other
+          measurable economic benefits outweigh the costs associated with supporting
+          the project. Residential development creates stronger results when recurring
+          tax revenue, household economic activity, utility contribution, and related
+          growth produce the greater benefit after the continuing costs of public
+          services and infrastructure are considered.
+        </p>
+
+        <p>
+          In other words, the more useful policy question is not simply whether a
+          community should prefer homes or data centers. It is whether a particular
+          development converts its economic advantages into a sustainable net benefit
+          for the community supporting it.
+        </p>
+
+        <p>
+          Capital scale favors the selected data-center projects. Residential
+          development distributes economic activity more broadly across households,
+          businesses, and public services. Determining which performs better requires
+          comparing those different advantages on a consistent basis.
+        </p>
+
+
+        <!-- Sources -->
+        <h2>Sources & Methodology</h2>
+
+        <ol class="sources">
+
+          <li>
+            <strong>U.S. Census Bureau.</strong>
+            QuickFacts: Jefferson County, Alabama.
+            Reports a 2020–2024 median value of approximately $240,000 for
+            owner-occupied housing units.
+            <a
+              href="https://www.census.gov/quickfacts/fact/table/jeffersoncountyalabama/RHI125224"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Census Bureau source
+            </a>.
+          </li>
+
+          <li>
+            <strong>Plain Property Tax.</strong>
+            Jefferson County residential property-tax benchmark.
+            Secondary compilation used for the approximately $1,409 median annual
+            property-tax estimate.
+            <a
+              href="https://plainpropertytax.com/counties/jefferson-al"
+              target="_blank"
+              rel="noopener noreferrer">
+              View property-tax source
+            </a>.
+          </li>
+
+          <li>
+            <strong>Federal Reserve Bank of St. Louis.</strong>
+            Jefferson County median household income.
+            Reports a 2024 estimate of $69,346 based on U.S. Census Bureau data.
+            <a
+              href="https://fred.stlouisfed.org/series/MHIAL01073A052NCEN"
+              target="_blank"
+              rel="noopener noreferrer">
+              View FRED source
+            </a>.
+          </li>
+
+          <li>
+            <strong>Alabama Department of Revenue.</strong>
+            Sales and Use Tax Rates.
+            Used as the source for the Alabama general state sales-tax rate.
+            <a
+              href="https://www.revenue.alabama.gov/sales-use/tax-rates/"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Alabama Department of Revenue source
+            </a>.
+          </li>
+
+          <li>
+            <strong>ServerCountry.</strong>
+            Alabama data-center project tracker.
+            Used as a project-level compilation for selected publicly reported
+            Alabama data-center investments.
+            <a
+              href="https://servercountry.org/data/states/alabama/"
+              target="_blank"
+              rel="noopener noreferrer">
+              View project tracker
+            </a>.
+          </li>
+
+          <li>
+            <strong>Montgomery Regional Chamber.</strong>
+            Meta expansion announcement.
+            Used for publicly reported investment, permanent employment, and
+            peak skilled-trade workforce figures associated with the expanded
+            Montgomery campus.
+            <a
+              href="https://www.montgomerychamber.com/blog/press-releases-3604/post/meta-announces-expansion-of-montgomery-data-center-41575"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Montgomery Regional Chamber source
+            </a>.
+          </li>
+
+          <li>
+            <strong>Alabama Department of Revenue.</strong>
+            Chapter 9B Abatements.
+            Used for information regarding eligible taxes and published
+            data-processing-center abatement provisions.
+            <a
+              href="https://www.revenue.alabama.gov/tax-incentives/chapter-9b-abatements/"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Chapter 9B source
+            </a>.
+          </li>
+
+          <li>
+            <strong>Alabama Department of Commerce.</strong>
+            Alabama Jobs Act summary.
+            Used for published information regarding Jobs Credit and Investment
+            Credit provisions.
+            <a
+              href="https://www.madeinalabama.com/resources/documents/job-acts-summary/"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Alabama Jobs Act source
+            </a>.
+          </li>
+
+          <li>
+            <strong>City of Birmingham.</strong>
+            Tax and License Division.
+            Used to identify examples of city-administered tax and license categories.
+            <a
+              href="https://www.birminghamal.gov/government/city-departments/finance/tax-license-division"
+              target="_blank"
+              rel="noopener noreferrer">
+              View City of Birmingham source
+            </a>.
+          </li>
+
+          <li>
+            <strong>Jefferson County Environmental Services.</strong>
+            Residential rate information.
+            Used for information regarding residential sewer billing.
+            <a
+              href="https://www.jccal.org/436/Rate-Information"
+              target="_blank"
+              rel="noopener noreferrer">
+        ma projects from the
+          cited project tracker with publicly reported investment amounts of at least
+          $372 million. The reported amounts used in the analysis are:
+          $372 million, $400 million, three projects at $1.5 billion, one at
+          $2 billion, two at $6 billion, and one at $14.5 billion.
+        </p>
+
+        <p>
+          These values produce a simple average of approximately $3.75 billion and
+          a median of $1.5 billion. Projects without publicly reported investment
+          figures and projects below $372 million were not included in the selected
+          comparison.
+        </p>
+
+        <aside class="note" aria-label="Interpretation note">
+          <strong>Interpretation note:</strong>
+          Announced project investment should not be treated as equivalent to assessed
+          property value, annual tax collections, or net public benefit. The figures
+          are used here to compare the relative capital scale of the selected developments.
+        </aside>
+
+
+        <!-- Disclosure -->
+        <p class="muted">
+          <em>
+            This paper reflects my personal analysis based on publicly available
+            information and is intended for educational and professional portfolio
+            purposes. It does not represent the views of my employer or any other
+            organization with which I am affiliated. Examples and calculations are
+            illustrative and should not be interpreted as projections for a specific
+            development project.
+          </em>
+        </p>
+
+      </section>
+    </article>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+
+      <p>© <span id="y"></span> Christene Chavez</p>
+
+      <nav aria-label="Contact">
+        <a href="mailto:christenechavez@ymail.com">Email</a>
+
+        <a
+          href="https://www.linkedin.com/in/christene-chavez/"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/christenechavez"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub
+        </a>
+      </nav>
+
+    </div>
+  </footer>
+
+
+  <script>
+    // Sets current year dynamically
+    (function() {
+      var el = document.getElementById('y');
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+
+  ../assets/script.jsscript>
+
+</body>
+</html>
