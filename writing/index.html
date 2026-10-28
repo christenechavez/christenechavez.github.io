@@ -3,15 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
   <title>Writing — Christene Chavez</title>
-
   <link rel="stylesheet" href="../assets/styles.css">
-
-  <meta
-    name="description"
-    content="Research and commentary by Christene Chavez on energy, infrastructure, public policy, economic development, finance, data, and leadership."
-  >
 
   <style>
     /* Match Experience page margins and color balance */
@@ -63,12 +56,6 @@
     .card a.btn:hover {
       opacity: 0.9;
     }
-
-    .card a.btn:focus-visible,
-    .card h3 a:focus-visible {
-      outline: 3px solid var(--primary);
-      outline-offset: 3px;
-    }
   </style>
 </head>
 
@@ -81,33 +68,28 @@
     </a>
   </div>
 
-  <!-- Hamburger menu -->
   <button
     class="nav-toggle"
     aria-expanded="false"
     aria-controls="site-links"
-    aria-label="Open navigation menu">
+    aria-label="Menu">
     ☰
   </button>
 
-  <!-- Primary navigation -->
-  <nav
-    class="controls"
-    id="site-links"
-    aria-label="Primary navigation">
-
+  <nav class="controls" id="site-links" aria-label="Primary navigation">
     <a class="btn" href="/index.html">Home</a>
     <a class="btn" href="/resume/index.html">Resume</a>
     <a class="btn" href="/experience.html">Experience</a>
     <a class="btn" href="/education.html">Education</a>
     <a class="btn" href="/projects/index.html">Projects</a>
-    <a class="btn" href="/writing/index.html" aria-current="page">Writing</a>
+    <a class="btn" href="/writing/index.html">Writing</a>
     <a class="btn" href="/contact.html">Contact</a>
   </nav>
 </header>
 
 
 <main class="page-wrap">
+
   <h1>Writing</h1>
 
   <p class="lead">
@@ -115,20 +97,158 @@
     economic development, finance, data, and leadership.
   </p>
 
-  <section aria-label="Articles and white papers">
-    <div id="writing-grid" aria-live="polite"></div>
+  <section aria-label="Writing and research">
+
+    <!-- Data Centers vs Residential Development -->
+    <article class="card">
+      <h3>
+        <a
+          href="data-centers-vs-residential-homes.html"
+          style="color:var(--primary);text-decoration:none;">
+          Evaluating Data Centers and Residential Development
+        </a>
+      </h3>
+
+      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+        <time datetime="2026-10-28">October 28, 2026</time>
+      </p>
+
+      <p>
+        A comparative framework for evaluating the fiscal, infrastructure,
+        utility, and economic impacts of data-center investment and
+        residential growth.
+      </p>
+
+      <a
+        class="btn"
+        href="data-centers-vs-residential-homes.html"
+        aria-label="Read Evaluating Data Centers and Residential Development">
+        Read →
+      </a>
+    </article>
+
+
+    <!-- Electric Bill -->
+    <article class="card">
+      <h3>
+        <a
+          href="what-youre-really-paying-for.html"
+          style="color:var(--primary);text-decoration:none;">
+          What You’re Really Paying For: Inside Your Monthly Electric Bill
+        </a>
+      </h3>
+
+      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+        <time datetime="2026-02-03">February 3, 2026</time>
+      </p>
+
+      <p>
+        A plain-language look at what drives electric bills, from storm
+        recovery and infrastructure investment to regulation and changing
+        electricity demand.
+      </p>
+
+      <a
+        class="btn"
+        href="what-youre-really-paying-for.html"
+        aria-label="Read What You’re Really Paying For: Inside Your Monthly Electric Bill">
+        Read →
+      </a>
+    </article>
+
+
+    <!-- Small Town Data -->
+    <article class="card">
+      <h3>
+        <a
+          href="small-towns-lessons-on-the-power-of-data.html"
+          style="color:var(--primary);text-decoration:none;">
+          A Small Town’s Lessons on the Power of Data
+        </a>
+      </h3>
+
+      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+        <time datetime="2025-10-21">October 21, 2025</time>
+      </p>
+
+      <p>
+        Practical wins from treating municipal data like a community asset.
+      </p>
+
+      <a
+        class="btn"
+        href="small-towns-lessons-on-the-power-of-data.html"
+        aria-label="Read A Small Town’s Lessons on the Power of Data">
+        Read →
+      </a>
+    </article>
+
+
+    <!-- Biscuits -->
+    <article class="card">
+      <h3>
+        <a
+          href="biscuits-belief-and-being-the-boss.html"
+          style="color:var(--primary);text-decoration:none;">
+          Biscuits, Belief, and Being the Boss
+        </a>
+      </h3>
+
+      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+        <time datetime="2025-10-20">October 20, 2025</time>
+      </p>
+
+      <p>
+        Leadership that listens first and celebrates small everyday moments.
+      </p>
+
+      <a
+        class="btn"
+        href="biscuits-belief-and-being-the-boss.html"
+        aria-label="Read Biscuits, Belief, and Being the Boss">
+        Read →
+      </a>
+    </article>
+
+
+    <!-- Finding the Right Tool -->
+    <article class="card">
+      <h3>
+        <a
+          href="finding-the-right-tool.html"
+          style="color:var(--primary);text-decoration:none;">
+          Finding the Right Tool
+        </a>
+      </h3>
+
+      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+        <time datetime="2025-10-19">October 19, 2025</time>
+      </p>
+
+      <p>
+        Choosing the simplest solution that actually solves the problem.
+      </p>
+
+      <a
+        class="btn"
+        href="finding-the-right-tool.html"
+        aria-label="Read Finding the Right Tool">
+        Read →
+      </a>
+    </article>
+
   </section>
+
 </main>
 
 
 <footer class="site-footer">
   <div class="wrap">
+
     <p>© <span id="y"></span> Christene Chavez</p>
 
     <nav aria-label="Contact">
-      <a href="mailto:christenechavez@ymail.com">
-        Email
-      </a>
+      <a href="mailto:christenechavez@ymail.com">Email</a>
 
       <a
         href="https://www.linkedin.com/in/christene-chavez/"
@@ -144,94 +264,16 @@
         GitHub
       </a>
     </nav>
+
   </div>
 </footer>
 
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
-
-  window._writingData = [
-    {
-      slug: "data-centers-vs-residential-homes",
-      title: "Evaluating Data Centers and Residential Development",
-      blurb: "A comparative framework for evaluating the fiscal, infrastructure, utility, and economic impacts of data-center investment and residential growth.",
-      date: "2026-10-28"
-    },
-    {
-      slug: "what-youre-really-paying-for",
-      title: "What You’re Really Paying For: Inside Your Monthly Electric Bill",
-      blurb: "A plain-language look at what drives electric bills, from storm recovery and infrastructure investment to regulation and changing electricity demand.",
-      date: "2026-02-03"
-    },
-    {
-      slug: "small-towns-lessons-on-the-power-of-data",
-      title: "A Small Town’s Lessons on the Power of Data",
-      blurb: "Practical wins from treating municipal data like a community asset.",
-      date: "2025-10-21"
-    },
-    {
-      slug: "biscuits-belief-and-being-the-boss",
-      title: "Biscuits, Belief, and Being the Boss",
-      blurb: "Leadership that listens first and celebrates small everyday moments.",
-      date: "2025-10-20"
-    },
-    {
-      slug: "finding-the-right-tool",
-      title: "Finding the Right Tool",
-      blurb: "Choosing the simplest solution that actually solves the problem.",
-      date: "2025-10-19"
-    }
-  ];
-
-  const grid = document.getElementById('writing-grid');
-
-  const rows = [...window._writingData].sort((a, b) =>
-    (b.date || "").localeCompare(a.date || "")
-  );
-
-  grid.innerHTML = rows.map(article => {
-    const href = `${article.slug}.html`;
-
-    const formattedDate = article.date
-      ? new Date(article.date + "T12:00:00").toLocaleDateString(
-          undefined,
-          {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          }
-        )
-      : "";
-
-    const dateMarkup = article.date
-      ? `
-        <p
-          class="meta"
-          stylef="${href}"
-            style="color:var(--primary);text-decoration:none;">
-            ${article.title}
-          </a>
-        </h3>
-
-        ${dateMarkup}
-
-        <p>${article.blurb || ""}</p>
-
-        <a
-          class="btn"
-          href="${href}"
-          aria-label="Read ${article.title}">
-          Read →
-        </a>
-      </article>
-    `;
-  }).join("");
 </script>
 
-
-<!-- Site script so hamburger works on this subpage -->
-../assets/script.jsscript>
+<script src="../assets/script.js" defer></script>
 
 </body>
 </html>
