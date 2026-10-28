@@ -74,10 +74,36 @@
 document.getElementById('y').textContent = new Date().getFullYear();
 
 window._writingData = [
-  { slug: "what-youre-really-paying-for", title: "What You’re Really Paying For: Inside Your Monthly Electric Bill", blurb: "An inside look at what really drives your electric bill, from storm recovery to infrastructure investments you never see.", date: "2026-02-03" },
-  { slug: "small-towns-lessons-on-the-power-of-data", title: "A Small Town’s Lessons on the Power of Data", blurb: "Practical wins from treating municipal data like a community asset.", date: "2025-10-21" },
-  { slug: "biscuits-belief-and-being-the-boss", title: "Biscuits, Belief, and Being the Boss", blurb: "Leadership that listens first and celebrates small everyday moments.", date: "2025-10-20" },
-  { slug: "finding-the-right-tool", title: "Finding the Right Tool", blurb: "Choosing the simplest solution that actually solves the problem.", date: "2025-10-19" }
+  {
+    slug: "data-centers-vs-residential-homes",
+    title: "Evaluating Data Centers and Residential Development",
+    blurb: "A comparative framework for evaluating the fiscal, infrastructure, utility, and economic impacts of data-center investment and residential growth.",
+    date: "2026-10-28"
+  },
+  {
+    slug: "what-youre-really-paying-for",
+    title: "What You’re Really Paying For: Inside Your Monthly Electric Bill",
+    blurb: "A plain-language look at what drives electric bills, from storm recovery and infrastructure investment to regulation and changing electricity demand.",
+    date: "2026-02-03"
+  },
+  {
+    slug: "small-towns-lessons-on-the-power-of-data",
+    title: "A Small Town’s Lessons on the Power of Data",
+    blurb: "Practical wins from treating municipal data like a community asset.",
+    date: "2025-10-21"
+  },
+  {
+    slug: "biscuits-belief-and-being-the-boss",
+    title: "Biscuits, Belief, and Being the Boss",
+    blurb: "Leadership that listens first and celebrates small everyday moments.",
+    date: "2025-10-20"
+  },
+  {
+    slug: "finding-the-right-tool",
+    title: "Finding the Right Tool",
+    blurb: "Choosing the simplest solution that actually solves the problem.",
+    date: "2025-10-19"
+  }
 ];
 
 const grid = document.getElementById('writing-grid');
@@ -87,9 +113,17 @@ grid.innerHTML = rows.map(a=>{
   return `
     <article class="card">
       <h3><a href="${href}" style="color:var(--primary);text-decoration:none;">${a.title}</a></h3>
-      <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
-        ${a.date ? new Date(a.date).toLocaleDateString() : ""}
-      </p>
+      ${a.date ? `
+  <p class="meta" style="color:var(--muted);font-size:.9rem;margin-bottom:6px;">
+    <time datetime="${a.date}">
+      ${new Date(a.date + "T12:00:00").toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      })}
+    </time>
+  </p>
+` : ""}
       <p>${a.blurb||""}</p>
       <a class="btn" href="${href}">Read →</a>
     </article>`;
